@@ -1,0 +1,23 @@
+@import 'remixicon/fonts/remixicon.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none !important;
+}
+
+body * {
+    @apply transition-all duration-300;
+}
+
+.tag {
+    @apply text-sm font-medium uppercase text-primary-500 hover:text-primary-600 dark:hover:text-primary-400;
+}
+
+.tag:not(:last-child):after {
+    content: ",";
+    margin: 0 2px;
+    color: black;
+}

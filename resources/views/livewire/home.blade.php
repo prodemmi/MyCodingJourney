@@ -1,7 +1,7 @@
 @section('body')
 <div>
-    <h1 class="text-3xl mb-2 font-bold dark:text-white">Recent Posts</h1>
-    <hr>
+    <h1 class="text-4xl mb-2 font-bold dark:text-white">Recent Posts</h1>
+    <hr class="my-4">
     <ul class="divide-y divide-gray-200 dark:divide-gray-700">
         @foreach($recentPosts as $recentPost)
             <li class="py-4">

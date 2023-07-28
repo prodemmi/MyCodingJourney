@@ -12,11 +12,12 @@
     </div>
     <div class="flex items-center text-base leading-5">
         <div class="hidden sm:block">
-            <a class="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4" href="/">Home</a>
-            <a class="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4" href="/posts">Posts</a>
-            <a class="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4" href="/tags">Tags</a>
-            <a class="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4" href="/about">About</a>
-            <a class="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4" href="/donate">
+            @php($activeButton = fn($path) => request()->path() === $path ? 'text-primary-500 border-b-4 !py-2' : 'text-gray-900')
+            <a class="p-1 font-medium dark:text-gray-100 sm:p-4 {{ $activeButton('/') }}" href="/">Home</a>
+            <a class="p-1 font-medium dark:text-gray-100 sm:p-4 {{ $activeButton('posts') }}" href="/posts">Posts</a>
+            <a class="p-1 font-medium dark:text-gray-100 sm:p-4 {{ $activeButton('tags') }}" href="/tags">Tags</a>
+            <a class="p-1 font-medium dark:text-gray-100 sm:p-4 {{ $activeButton('about') }}" href="/about">About</a>
+            <a class="p-1 font-medium dark:text-gray-100 sm:p-4 {{ $activeButton('donate') }}" href="/donate">
                 <i class="ri-coins-fill text-2xl text-yellow-500"></i>
                 <span>Donate</span>
             </a>

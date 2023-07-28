@@ -12,7 +12,7 @@ return [
     |-------------------
     */
 
-    'show_translatable_field_icon' => true,
+    'show_translatable_field_icon'     => true,
     'translatable_field_icon_position' => 'right', // left or right
 
     'locales' => [
@@ -176,7 +176,7 @@ return [
         // "fr_SN" => "French (Senegal)",
         // "fr_CH" => "French (Switzerland)",
         // "fr_TG" => "French (Togo)",
-        'fr' => 'French',
+        //        'fr' => 'French',
         // "ff_SN" => "Fulah (Senegal)",
         // "ff" => "Fulah",
         // "gl_ES" => "Galician (Spain)",
@@ -222,7 +222,7 @@ return [
         // "ga" => "Irish",
         // "it_IT" => "Italian (Italy)",
         // "it_CH" => "Italian (Switzerland)",
-        'it' => 'Italian',
+        //        'it' => 'Italian',
         // "ja_JP" => "Japanese (Japan)",
         // "ja" => "Japanese",
         // "kea_CV" => "Kabuverdianu (Cape Verde)",
@@ -312,7 +312,7 @@ return [
         // "ps" => "Pashto",
         // "fa_AF" => "Persian (Afghanistan)",
         // "fa_IR" => "Persian (Iran)",
-        // "fa" => "Persian",
+        "fa" => "Persian",
         // "pl_PL" => "Polish (Poland)",
         // "pl" => "Polish",
         // "pt_BR" => "Portuguese (Brazil)",
@@ -327,7 +327,7 @@ return [
         // "pa" => "Punjabi",
         // "ro_MD" => "Romanian (Moldova)",
         // "ro_RO" => "Romanian (Romania)",
-        'ro' => 'Romanian',
+        //        'ro' => 'Romanian',
         // "rm_CH" => "Romansh (Switzerland)",
         // "rm" => "Romansh",
         // "rof_TZ" => "Rombo (Tanzania)",
@@ -459,7 +459,7 @@ return [
         'columns' => [
             'crud::columns', // falls back to 'resources/views/vendor/backpack/crud/columns'
         ],
-        'fields' => [
+        'fields'  => [
             'crud::fields', // falls back to 'resources/views/vendor/backpack/crud/fields'
         ],
         'filters' => [

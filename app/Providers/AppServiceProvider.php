@@ -2,8 +2,7 @@
 
 namespace App\Providers;
 
-use App\Repositories\Post\IPostRepository;
-use App\Repositories\Post\PostRepository;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -21,6 +20,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->app->bind(IPostRepository::class, PostRepository::class);
+        if($this->app->environment('production')) {
+            URL::forceScheme('https');
+        }
     }
 }

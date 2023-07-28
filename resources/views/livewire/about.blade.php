@@ -4,10 +4,8 @@
 
 @section('body')
 <div>
-    <div class="space-y-2 pb-8 md:space-y-5">
-        <h1 class="text-3xl mb-2 font-bold dark:text-white">About</h1>
-        <hr>
-    </div>
+    <h1 class="text-4xl mb-2 font-bold dark:text-white">About</h1>
+    <hr class="my-4">
     <div class="flex items-start justify-center">
         <div class="p-4">
             <img src="https://avatars.githubusercontent.com/u/55631515?v=4" alt="" class="rounded-full">
@@ -29,6 +27,7 @@
                 ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet.
                 Duis dapibus diam vel metus tempus vulputate.
             </p>
+            <a href="{{ config('socials.cv') }}" target="_blank">CV</a>
         </div>
     </div>
 </div>

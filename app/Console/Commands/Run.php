@@ -37,6 +37,9 @@ class Run extends Command
         $this->info('seeding ...');
         Artisan::call('db:seed');
         $this->info('seed done.');
+        $this->info('installing backpack.');
+        Artisan::call('backpack:install -n');
+        $this->info('backpack installed.');
 
         $this->info('project initialized.');
     }

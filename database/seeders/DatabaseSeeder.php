@@ -3,13 +3,22 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
 
 class DatabaseSeeder extends Seeder
 {
-    public function run(): void
+    public function run() : void
     {
-        $this->callOnce(TagSeeder::class);
-        $this->callOnce(AdminSeeder::class);
-        $this->callOnce(PostSeeder::class);
+        if ( !Schema::hasTable('tags') ) {
+            $this->call(TagSeeder::class);
+        }
+
+        if ( !Schema::hasTable('users') ) {
+            $this->call(AdminSeeder::class);
+        }
+
+        if ( app()->isLocal() ) {
+            $this->call(PostSeeder::class);
+        }
     }
 }

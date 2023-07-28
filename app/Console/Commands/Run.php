@@ -27,10 +27,7 @@ class Run extends Command
     public function handle()
     {
         $database = database_path('database.sqlite');
-        if ( file_exists($database) ) {
-            unlink($database);
-            $this->info('database deleted.');
-        }else{
+        if ( !file_exists($database) ) {
             $this->alert("database.sqlite not found.");
         }
 

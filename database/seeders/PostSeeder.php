@@ -12,11 +12,13 @@ class PostSeeder extends Seeder
     public function run(): void
     {
         $user = User::all()->first();
-        Post::factory()->count(15)->for($user)->create()->each(function (Post $post) {
-            $count = rand(0, 4);
-            if ($count) {
-                $post->tags()->saveMany(Tag::all()->random($count));
-            }
-        });
+        if ( $user ) {
+            Post::factory()->count(15)->for($user)->create()->each(function (Post $post) {
+                $count = rand(0, 4);
+                if ($count) {
+                    $post->tags()->saveMany(Tag::all()->random($count));
+                }
+            });
+        }
     }
 }

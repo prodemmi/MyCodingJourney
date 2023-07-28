@@ -41,6 +41,7 @@
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
             "@php artisan vendor:publish --force --tag=livewire:assets --ansi",
+            "@php artisan backpack:install -n --ansi",
             "@php artisan init --ansi"
         ],
         "post-update-cmd": [

@@ -21,3 +21,8 @@ body * {
     margin: 0 2px;
     color: black;
 }
+
+.presentation-iframe {
+    /*@apply border-1 border-gray-200;*/
+    height: 504px;
+}

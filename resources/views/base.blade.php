@@ -22,7 +22,7 @@
 </head>
 <body class="dark:bg-black">
 
-<div class="mx-auto max-w-3xl px-6 sm:px-2 xl:max-w-4xl xl:px-0">
+<div class="mx-auto max-w-4xl px-6 sm:px-2 xl:max-w-4xl xl:px-0">
     @include('sections.header')
     <main class="flex flex-col py-12" style="min-height: 60vh">
         @yield('body')

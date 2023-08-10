@@ -15,6 +15,7 @@
             @php($activeButton = fn($path) => request()->path() === $path ? 'text-primary-500 border-b-4 !py-2' : 'text-gray-900')
             <a class="p-1 font-medium dark:text-gray-100 sm:p-4 {{ $activeButton('/') }}" href="/">Home</a>
             <a class="p-1 font-medium dark:text-gray-100 sm:p-4 {{ $activeButton('posts') }}" href="/posts">Posts</a>
+            <a class="p-1 font-medium dark:text-gray-100 sm:p-4 {{ $activeButton('presentations') }}" href="/presentations">Presentations</a>
             <a class="p-1 font-medium dark:text-gray-100 sm:p-4 {{ $activeButton('tags') }}" href="/tags">Tags</a>
             <a class="p-1 font-medium dark:text-gray-100 sm:p-4 {{ $activeButton('about') }}" href="/about">About</a>
             <a class="p-1 font-medium dark:text-gray-100 sm:p-4 {{ $activeButton('donate') }}" href="/donate">
@@ -38,6 +39,10 @@
                     <div class="px-12 py-4">
                         <a class="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
                            href="/posts">Posts</a>
+                    </div>
+                    <div class="px-12 py-4">
+                        <a class="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+                           href="/presentations">Presentations</a>
                     </div>
                     <div class="px-12 py-4">
                         <div class="px-12 py-4">

@@ -3,5 +3,5 @@
 @endsection
 
 @section('body')
-    <iframe class="presentation-iframe" src="/prs/{{ $slug }}" title="{{ $title }}"></iframe>
+    <iframe class="presentation-iframe" src="https://mycodingjourney.iran.liara.run/prs/{{ $slug }}" title="{{ $title }}"></iframe>
 @endsection
